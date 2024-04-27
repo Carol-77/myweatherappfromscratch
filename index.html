@@ -4,29 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App </title>
-    <link rel="stylesheets" href="src/style.css"/>
+    <link rel="stylesheet" href="src/style.css"/>
 </head>
 <body>
     <div class="weather">
         <header>
-            <input type="Search" placeholder="Enter a city.." required>
-            <input type="Submit" value="Search">
+            <form class="search-form">
+                <input type="Search" placeholder="Enter a city.." required class="city-input">
+                <input type="Submit" value="Search" class="search-city">   
+            </form>
+            
         </header>
         <main>
-            <div>
-                <h1>Paris</h1>
-            <p>
-                Saturday 12:54, overcast clouds
-                <br/>
-                Humidity: <strong>74%</strong>, Wind: <strong>5.14km/h</strong>  
-            </p> 
+            <div class="weather-app-info">
+                <div>
+                    <h1 class="city-name">Paris</h1>
+                <p class="city-details">
+                    Saturday 12:54, overcast clouds
+                    <br/>
+                    Humidity: <strong>74%</strong>, Wind: <strong>5.14km/h</strong>  
+                </p> 
+                </div>
+               <div>
+                🌤12°C
+               </div>
             </div>
-           <div>
-            🌤12°C
-           </div>
+           
            
         </main>
-        <footer></footer> 
+        <footer>
+            This project was coded by Caroline Njagi is
+             <a href="">open-sourced on Github</a> and hosted on <a href="">Netlify</a>
+        </footer> 
     </div>
    
 </body>
