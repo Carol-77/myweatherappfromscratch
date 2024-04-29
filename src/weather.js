@@ -9,11 +9,12 @@
       let humidityElement = document.querySelector("#humidity")
       let windSpeedElement = document.querySelector("#wind-speed")
       let date = new Date(response.data.time*1000);
-
-      console.log(response.data.condition.description);
+      let iconElement = document.querySelector("#icon");
+      
+      
+      icon.innerHTML =  '<img src="${response.data.condition.icon_url}" class="weather-icon"'
 
       cityElement.innerHTML = response.data.city;
-
       descriptionElement.innerHTML = response.data.condition.description;
       timeElement.innerHTML = formatDate(date);
       humidityElement.innerHTML = '${response.data.temperature.humidity}%';
@@ -36,8 +37,8 @@
    }  
    
    function searchCity(city){
-    let apiKey = "2d96d64425dca1d6eda00d942a281c0d";
-    let apiUrl = 'https://api.shecodes.io/weather/v1/current?query={city}&key={2d96d64425dca1d6eda00d942a281c0d}'
+    let apiKey = "7342109a0ab45abta11f9354eb1e1ofa";
+    let apiUrl = 'https://api.shecodes.io/weather/v1/forecast?query=${Lisbon}&key=${7342109a0ab45abta11f9354eb1e1ofa}&units=metric'
     axios.get(apiUrl).then(changeWeather);
    
    
@@ -53,7 +54,7 @@
     let cityInputElement = document.querySelector("#search-form");
     cityInputElement.addEventListener("submit", handleSearchSubmit);  
     
-   
+   searchCity("Paris");
 
 
 
