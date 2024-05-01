@@ -12,7 +12,8 @@
       let iconElement = document.querySelector("#icon");
       
       
-      icon.innerHTML =  '<img src="${response.data.condition.icon_url}" class="weather-icon"'
+      icon.innerHTML = 
+      `<img src="${response.data.condition.icon_url}" class="weather-icon"`LL;
 
       cityElement.innerHTML = response.data.city;
       descriptionElement.innerHTML = response.data.condition.description;
@@ -23,7 +24,7 @@
       ty;
    }
    
-   function formatDate(days){
+   function formatDate(date){
       let minutes = date.getMinutes();
       let hours = date.getHours();
       let days = ["Sunday", "Monday", "Teusday","Wednesday", "Thursday","Friday","Saturday"];
@@ -33,12 +34,13 @@
          minutes = '0${minutes}';
       }
 
-      return '${day} ${hours} ${minutes}';
+      return `${day} ${hours} ${minutes}`;
    }  
    
    function searchCity(city){
-    let apiKey = "7342109a0ab45abta11f9354eb1e1ofa";
-    let apiUrl = 'https://api.shecodes.io/weather/v1/forecast?query=${Lisbon}&key=${7342109a0ab45abta11f9354eb1e1ofa}&units=metric'
+    let apiKey = "bd79ao40tde3dec118ca46bc3e6dd55f";
+    let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${bd79ao40tde3dec118ca46bc3e6dd55f}&units=metric`
+    console.log(apiUrl);
     axios.get(apiUrl).then(changeWeather);
    
    
