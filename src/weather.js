@@ -13,7 +13,7 @@
       
       
       icon.innerHTML = 
-      `<img src="${response.data.condition.icon_url}" class="weather-icon"`LL;
+      '<img src="${response.data.condition.icon_url}" class="weather-icon"';
 
       cityElement.innerHTML = response.data.city;
       descriptionElement.innerHTML = response.data.condition.description;
