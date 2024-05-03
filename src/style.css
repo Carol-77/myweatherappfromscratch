@@ -69,3 +69,13 @@ footer{
     font-size: 15px;
     color: rgba(0, 0, 0, 0.6);
 }
+.weather-forecast{
+    margin-top: 20px;
+}
+.forecast-date{
+    opacity: 0.6;
+    font-size: 16px;
+}
+.forecast-min{
+    opacity: 0.6;
+}
